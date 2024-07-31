@@ -1,0 +1,16 @@
+<!-- studentList.html -->
+<template>
+    <lightning-card title="Student List">
+        <template if:true={students}>
+            <lightning-datatable
+                key-field="Id"
+                data={students}
+                columns={columns}
+                hide-checkbox-column
+            ></lightning-datatable>
+        </template>
+        <template if:true={error}>
+            <div class="slds-text-color_error">Error: {error.message}</div>
+        </template>
+    </lightning-card>
+</template>
