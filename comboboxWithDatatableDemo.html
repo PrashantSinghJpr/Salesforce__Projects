@@ -1,0 +1,39 @@
+<template>
+
+    <lightning-card title="Combobox Card">
+        <!-- combobox starts here -->
+
+        <lightning-combobox
+            label="Accounts Available"
+            value={value}
+            placeholder="Select an Account"
+            options={options}
+            onchange={handleChangedValue} >
+        
+        </lightning-combobox>
+        <!-- combobox end here -->
+
+    </lightning-card>
+    
+    <!-- Show/hide card -->
+
+        <template if:true={cardVisible}>
+
+            <lightning-card title ="Datatable Card">
+
+                <!-- Contact datatable starts from here -->
+
+                <div style="height: 200px;">
+                <lightning-datatable
+                    key-field="Id"
+                    data={data}
+                    columns={columns}
+                >
+                </lightning-datatable>
+            </div>
+            <!-- datatable ends here -->
+            </lightning-card>
+            
+            
+        </template>
+</template>
